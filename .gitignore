@@ -23,10 +23,6 @@
 *.dll
 *.so.*
 
-# Fortran module files
-*.mod
-*.smod
-
 # Compiled Static libraries
 *.lai
 *.la
@@ -47,7 +43,6 @@ build-*/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
-Makefile
 install_manifest.txt
 compile_commands.json
 
@@ -66,3 +61,37 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Go
+/vendor/
+/coverage.out
+/coverage.html
+/bin/
+*.test
+
+# ESP-IDF / PlatformIO
+sdkconfig
+sdkconfig.old
+sdkconfig.*
+managed_components/
+.pio/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# KiCad local and generated files; keep design sources under version control
+*-backups/
+*-cache.lib
+*-rescue.lib
+fp-info-cache
+sym-lib-table
+fp-lib-table
+*.kicad_prl
+*.kicad_pro-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak

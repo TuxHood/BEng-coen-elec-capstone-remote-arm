@@ -1,0 +1,49 @@
+name: Test case
+description: Propose a repeatable test for a requirement or subsystem.
+title: "[TEST] "
+body:
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Subsystem
+      options:
+        - Control glove
+        - Robotic arm
+        - Operator software
+        - Hardware / PCB
+        - Integration / safety
+    validations:
+      required: true
+  - type: input
+    id: requirement
+    attributes:
+      label: Requirement or issue
+      description: Link the source-verified requirement, design decision, or issue.
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose and expected result
+    validations:
+      required: true
+  - type: textarea
+    id: procedure
+    attributes:
+      label: Setup and procedure
+      description: State prerequisites, equipment, steps, and safety controls.
+    validations:
+      required: true
+  - type: textarea
+    id: pass-criteria
+    attributes:
+      label: Measurable pass criteria
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence to record
+      description: Include version identifiers, measurements, and logs.
+    validations:
+      required: true

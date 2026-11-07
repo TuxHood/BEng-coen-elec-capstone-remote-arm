@@ -1,0 +1,43 @@
+name: Bug report
+description: Report unexpected software, firmware, or hardware behaviour.
+title: "[BUG] "
+body:
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Subsystem
+      options:
+        - Control glove
+        - Robotic arm
+        - Operator software
+        - Hardware / PCB
+        - Integration / safety
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behaviour
+      description: What happened? Include relevant logs or photos with sensitive details removed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and conditions
+      description: Include software/firmware version, hardware revision, and safe reproduction steps.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link logs, test results, or a related requirement. Remove credentials and personal data.
+    validations:
+      required: false
