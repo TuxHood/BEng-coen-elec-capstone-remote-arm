@@ -1,0 +1,61 @@
+name: Task
+description: Track a project deliverable with clear ownership and acceptance criteria.
+title: "[TASK] "
+body:
+  - type: input
+    id: task-id
+    attributes:
+      label: Proposal task ID
+      description: Use an existing ID only after verifying it against the proposal.
+      placeholder: ARM-D1 (leave blank if no verified ID)
+    validations:
+      required: false
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Subsystem
+      options:
+        - Control glove
+        - Robotic arm
+        - Operator software
+        - Hardware / PCB
+        - Integration / safety
+        - Documentation / planning
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the deliverable and why the team needs it.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List observable results that show this task is complete.
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source document or related issue
+      description: Link the verified source, decision, or dependency.
+    validations:
+      required: false
+  - type: input
+    id: target-date
+    attributes:
+      label: Target date
+      description: Leave unscheduled until the team confirms a date.
+    validations:
+      required: false
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification evidence
+      description: State what evidence will demonstrate the acceptance criteria.
+    validations:
+      required: false
